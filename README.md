@@ -2,7 +2,7 @@
 
 > A REST API for the R package praise
 
-This is a simple REST API built with plumber that gives access to `praise()`
+This is a simple REST API built with [plumber](https://www.rplumber.io/) that gives access to `praise()`
 from the [praise package](https://github.com/rladies/praise) to build randomized
 friendly messages. Try it out at http://app.mikkomarttila.com/praise.
 
