@@ -4,4 +4,4 @@ services:
   praise-service:
     build: .
     ports:
-      - 5000:80
+      - 5001:80
