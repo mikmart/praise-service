@@ -9,11 +9,12 @@ praise_parts <- function() {
 }
 
 #* An endpoint to serve Slack post requests
-#* @param text the user-typed message
+#* @param text the user-typed template
 #* @post /praise/slack
+#* @serializer unboxedJSON
 praise_slack <- function(text = "You are ${adjective}!") {
-  jsonlite::toJSON(list(
+  list(
     response_type = "in_channel",
     text = praise::praise(text)
-  ), auto_unbox = TRUE)
+  )
 }
