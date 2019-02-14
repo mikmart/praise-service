@@ -4,16 +4,16 @@
 praise::praise
 
 #* @get /praise/parts
-function() {
+praise_parts <- function() {
   praise::praise_parts
 }
 
 #* An endpoint to serve Slack post requests
 #* @param text the user-typed message
 #* @post /praise/slack
-function(text = "You are ${adjective}!") {
-  list(
+praise_slack <- function(text = "You are ${adjective}!") {
+  jsonlite::toJSON(list(
     response_type = "in_channel",
     text = praise::praise(text)
-  )
+  ), auto_unbox = TRUE)
 }
